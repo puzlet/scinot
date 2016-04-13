@@ -5,52 +5,126 @@ class myLecture extends $blab.Lecture
 
   content: ->
     
-    @step "lecture-heading"
+    @step "lecture-heading",
+      pointer: [0, 0]
 
-    o = @step "lecture-text-10",
-      action: "fade"
+    ###
+    flash = (o) ->
+      f: ->
+        o.show 1000, ->
+          o.addClass("flash-background")
+          setTimeout (->
+            o.removeClass("flash-background")
+          ), 1000
+      b: ->
+    ###
+        
+    flash = (o) ->
+      f: ->
+        o.show 1000, ->
+          o.textillate()
+      b: ->
 
-    o = @step "lecture-text-20",
-      action: "fade"
-      replace: o
+        
+    flash2 = (o, p) ->
+      f: ->
+        p.fadeOut 1000,-> 
+          o.show 1000, ->
+            o.addClass("flash-background")
+            setTimeout (->
+              o.removeClass("flash-background")
+            ), 1000
+      b: ->
 
-    o = @step "lecture-text-30",
-      action: "fade"
-      replace: o
+    many = @step "lecture-text-many",
+      action: flash
 
-    o = @step "lecture-text-40",
-      action: "fade"
-      replace: o
+    space = @step "lecture-text-space",
+      action: flash
 
-    o = @step "lecture-text-50",
-      action: "fade"
-      replace: o
+    respect = @step "lecture-text-respect",
+      action: (o) -> flash2(o, many)
+
+    diameter = @step "lecture-text-diameter",
+      action: (o) -> flash2(o, space)
+
+    rarely = @step "lecture-text-rarely",
+      action: (u) -> flash2(u, respect)
+
+    instead = @step "lecture-text-instead",
+      action: (u) -> flash2(u, rarely)
+
+    sn = @step "lecture-text-sn",
+      action: (u) -> flash2(u, diameter)
+
+    roughly = @step "lecture-text-roughly",
+      action: (u) -> flash2(u, instead)
+
+    understanding = @step "lecture-text-understanding",
+      action: (u) -> flash2(u, roughly)
+
+    eg_intro = @step "lecture-text-eg-intro",
+      action: (u) -> flash2(u, sn)
+    #replace: diameter
+
+    @step "lecture-menu-examples",
+      #replace: eg_intro
+      action: (u) -> flash2(u, eg_intro)
 
     @step "lecture-table-count",
-      replace: o
       action: (o) ->
         f: -> o.fadeIn(1000)
         b: -> o.fadeOut()
 
-    o = @step "lecture-text-60",
-      action: "fade"
+    count_intro = @step "lecture-text-count",
+      #replace: understanding
+      action: (u) -> flash2(u, understanding)
 
     @step "lecture-slider-count",
-      replace: o
-      action: "fade"
+      action: (u) -> flash2(u, count_intro)
 
     @step "lecture-slider-count",
-      action: @action(vals: [1..27])
+      action: @action(vals: [1..3])
 
-    o = @step "lecture-text-70",
-      action: "fade"
+    counting = @step "lecture-text-counting-digits",
+      action: (u) -> flash2(u, count_intro)
 
-    o = @step "lecture-text-80",
+    for_instance = @step "lecture-text-for-instance",
+      action: (u) -> flash2(u, counting)
+
+    key = @step "lecture-text-key",
+      action: (u) -> flash2(u, for_instance)
+
+    o = @step "lecture-text-key-blank",
       action: "fade"
+      replace: key
+
+    product = @step "lecture-text-product",
       replace: o
+      action: flash
 
-    o = @step "lecture-text-90",
+    table_product = @step "lecture-table-product",
+      replace: product 
+      action: (o) ->
+        f: -> o.fadeIn(1000)
+        b: -> o.fadeOut()
+
+    power_of_ten = @step "lecture-text-power-of-ten",
       action: "fade"
-      replace: o
+
+    @step "lecture-slider-shift",
+      action: (u) -> flash2(u, power_of_ten)
+
+    @step "lecture-slider-shift",
+      action: @action(vals: [1..3])
+
+    one_digit = @step "lecture-text-one-digit",
+      action: flash
+
+    all_that_remains= @step "lecture-text-all-that-remains",
+      action: (u) -> flash2(u, one_digit)
+
+    @step "lecture-table-sn",
+      action: (u) -> flash2(u, all_that_remains)
 
 new myLecture

@@ -3,7 +3,7 @@
 
 <head>
 <meta charset='utf-8'>
-<title>Lecture Example</title>
+<title>Scientific Notation</title>
 <link rel='icon' href='//puzlet.org/puzlet/images/favicon.ico'>
 <link rel='stylesheet' href='//puzlet.org/lectures/css/vendor.css'>
 <link rel='stylesheet' href='//puzlet.org/lectures/css/style.css'>
@@ -15,88 +15,167 @@
 <div id='outer-container'>
 <div id='container'>
 
-<h1 id="lecture-heading">Scientific Notation</h1>
+<h1 id='lecture-heading'>Scientific Notation</h1>
 
-<div class="box-1-1">
-  
-  <div id="lecture-text-10">
-    Many things in science and engineering are beyond everyday
-    experience. For example, the Hitchhikers Guide to the Galaxy has
-    this to say about the size of the universe:
+<div class='box-2-1'>
+  <div id='lecture-text-many' class='flash'>
+    <p> Many things in science and engineering are beyond everyday
+      experience. For example, the Hitchhikers Guide to the Galaxy has
+      this to say about the size of the universe: </p>
   </div>
-  
-  <div id="lecture-text-20">
+</div>
+
+<div class='box-2-2'>
+  <div id='lecture-text-space' style='border: 3px solid green;' class='flash'>
     <blockquote>
       <p>Space is big. You just won't believe how vastly, hugely,
 	mind-bogglingly big it is. I mean, you may think it's a long
 	way down the road to the chemist's, but that's just peanuts to
-	space.</p>
+	space.
+      </p>
       <footer>
-	--- 
+	&mdash; 
 	<cite>
-	  <a href="https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy">
+	  <a href='https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy'>
 	    Hitchhiker's Guide to the Galaxy</a>
 	</cite>
       </footer>
     </blockquote>
+  </div>
+</div>
 
-    <center>
-      <img width = "400" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Observable_universe_logarithmic_illustration.png">
-    </center>
+<div class='box-2-1'>
+  <div id='lecture-text-respect' class='flash'>
+    <p> With respect to <a href='https://en.wikiquote.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy'>The Guide</a>,
+      another description of the visible universe is its approximate
+      diameter (in meters):
+    </p>
+  </div>
+</div>
 
+<div class='box-2-2'>
+  <div id='lecture-text-diameter' class='flash'>
+    <p style='font-size:24px;'>900000000000000000000000000</p>
+  </div>
+</div>
+
+<div class='box-2-1'>
+
+  <div id='lecture-text-rarely' class='flash'>
+    <p>Scientists and engineers <i>rarely</i> use such long
+      numbers&mdash; they are hard to read and to write.</p>
   </div>
 
-  <div id="lecture-text-30">
-    <p>With due respect to The Guide, a more <b>useful</b> description of
-      the visible universe is its approximate diameter (in
-      meters):</p>
-    <p style='font-size:55px;'>900000000000000000000000000</p>
-  </div>
-
-  <div id="lecture-text-40">
-    Scientists and engineers *rarely* write numbers like this---which
-    are far too long to be useful. Instead, we use **scientific
-    notation**:9&times;10<sup>26</sup>.  This roughly translates to:
-    "a nine and twenty six zeros". Lets's dig into this a little more.
+  <div id='lecture-text-instead' class='flash'>
+    <p> Instead, we use <b>scientific notation</b> </p>
   </div>
 
 </div>
 
-<div class="clear"></div>
+<div class='box-2-2'>
 
-<div class="box-2-2">
-
-  <div id="lecture-text-50">
-    Recall again the diameter of the visible universe (in meters).
+  <div id='lecture-text-sn' class='flash'>
+    <p style='font-size:24px;'>9&times;10<sup>26</sup></p>
   </div>
-
-  <div id="lecture-table-count"></div>
 
 </div>
 
-<div class="box-2-1"> 
-
-  <div id="lecture-text-60">
-    We can count the number of digits with a slider.
+<div class='box-2-1'>
+  
+  <div id='lecture-text-roughly' class='flash'>
+    <p> This roughly translates to: "a nine and twenty six zeros", and
+      is said "nine times ten to the power of twenty six".</p>
   </div>
 
-  <div id ="lecture-slider-count"></div>
+  <div id='lecture-text-understanding' class='flash'>
+    <p>Understanding, practicing and applying scientific notation is
+      the subject of this lecture.</p>
+  </div>
+  
+</div>
 
-  <div id="lecture-text-70">
-    Counting digits shows about how big a number is.
+<div class='box-2-2'>
+
+  <div id='lecture-text-eg-intro' class='flash'>
+    <p>Lets turn back to our example.</p>
   </div>
 
-  <div id="lecture-text-80">
-    For instance, a number with three digits is between 100 and
-    999---that is, in the hundreds. A number with four digits is
-    between 1000 and 9999---in the thousands.
+  <p>
+  <div id='lecture-menu-examples'></div>
+  </p>
+
+  <div id='lecture-table-count' class='lecture-table'></div>
+
+</div>
+
+<div class='box-2-1'> 
+
+  <div id='lecture-text-count' class='flash'>
+    <p> We can count the number of digits with a slider.</p>
   </div>
 
-  <div id="lecture-text-90">
-    The key to scientific notation is to express a number in hundreds
+  <div id ='lecture-slider-count'></div>
+
+  <div id='lecture-text-counting-digits' class='flash'>
+    <p>Counting digits shows about how big a number is.</p>
+  </div>
+
+  <div id='lecture-text-for-instance' class='flash'>
+    <p>For instance, a number with three digits is between 100 and
+    999&mdash;that is, in the hundreds. A number with four digits is
+    between 1000 and 9999&mdash;in the thousands. </p>
+  </div>
+
+  <div id='lecture-text-key' class='flash'>
+    <p>The key to scientific notation is to express a number in hundreds
     (if its three digits long) or thousands (if its four digits long)
-    or millions (if seven), or whatever.
+    or millions (if seven), or whatever.</p>
   </div>
+
+  <div id='lecture-text-key-blank'>
+    blank
+  </div>
+
+</div>
+
+<div class='clear'></div>
+
+<div class='box-2-2'> 
+
+  <div id='lecture-text-product' class='flash'>
+    <p>To do this for the number above (or any number), we write it as a
+    product of a leading number and a multiplying power of ten (1, 10,
+    100, 1000, ...).</p>
+  </div>
+
+  <div id='lecture-table-product' class='lecture-table'></div>
+
+</div>
+
+<div class='box-2-1'> 
+
+  <div id='lecture-text-power-of-ten' class='flash'>
+    <p>As the muliplying power of ten (the bottom number) is increased,
+    we shift the decimal point on the top number.</p> 
+  </div>
+
+  <div id ='lecture-slider-shift'></div>
+
+  <div id='lecture-text-one-digit' class='flash'>
+    <p>When the decimal point is one digit from the left, we nearly have
+    scientific notation. <p>
+  </div>
+
+  <div id='lecture-text-all-that-remains' class='flash'>    
+    <p>All that remains is to convert the lower number into an exponential
+    (a power of ten). (More on this in lecture 2.)</p>
+  </div>
+
+</div>
+
+<div class='box-2-2'>
+
+  <div id='lecture-table-sn' class='lecture-table'></div>
 
 </div>
 
