@@ -5,10 +5,6 @@ class myLecture extends $blab.Lecture
 
   content: ->
     
-    @step "lecture-heading",
-      pointer: [0, 0]
-
-    ###
     flash = (o) ->
       f: ->
         o.show 1000, ->
@@ -17,15 +13,31 @@ class myLecture extends $blab.Lecture
             o.removeClass("flash-background")
           ), 1000
       b: ->
-    ###
         
-    flash = (o) ->
+    heading = (o) ->
       f: ->
-        o.show 1000, ->
-          o.textillate()
+        o.show 0, ->
+          o.textillate({in:{effect:"swing"}})
+      b: ->
+
+    entrance = (o) ->
+      f: ->
+        o.show 0, ->
+          o.addClass('animated flipInX')
+      b: ->
+
+
+    flash2 = (o, p) ->
+      f: ->
+        animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+        p.addClass("animated flipOutX").one animationEnd, ->
+          o.show 0, ->
+            o.addClass("animated flipInX")
+
       b: ->
 
         
+    ###
     flash2 = (o, p) ->
       f: ->
         p.fadeOut 1000,-> 
@@ -35,12 +47,17 @@ class myLecture extends $blab.Lecture
               o.removeClass("flash-background")
             ), 1000
       b: ->
+      ###
+        
 
+    @step "lecture-heading",
+      action: heading
+        
     many = @step "lecture-text-many",
-      action: flash
+      action: entrance
 
     space = @step "lecture-text-space",
-      action: flash
+      action: entrance
 
     respect = @step "lecture-text-respect",
       action: (o) -> flash2(o, many)
