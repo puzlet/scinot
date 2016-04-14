@@ -31,6 +31,7 @@ class myLecture extends $blab.Lecture
       f: ->
         animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
         p.addClass("animated flipOutX").one animationEnd, ->
+          p.hide()
           o.show 0, ->
             o.addClass("animated flipInX")
 
