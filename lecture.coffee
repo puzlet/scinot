@@ -20,6 +20,13 @@ class myLecture extends $blab.Lecture
           o.textillate({in:{effect:"swing"}})
       b: ->
 
+    bigNumber = (o) ->
+      f: ->
+        o.show 0, ->
+          o.textillate({in:{effect:"fadInRightBig"}})
+      b: ->
+
+        
     entrance = (o) ->
       f: ->
         o.show 0, ->
@@ -34,6 +41,16 @@ class myLecture extends $blab.Lecture
           p.hide()
           o.show 0, ->
             o.addClass("animated flipInX")
+
+      b: ->
+
+    flash3 = (o, p) ->
+      f: ->
+        animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+        p.addClass("animated flipOutX").one animationEnd, ->
+          p.hide()
+          o.show 0, ->
+            o.textillate({in:{effect:"fadeInRightBig"}})
 
       b: ->
 
@@ -52,7 +69,7 @@ class myLecture extends $blab.Lecture
         
 
     @step "lecture-heading",
-      action: heading
+      action: "fade"
         
     many = @step "lecture-text-many",
       action: entrance
@@ -63,7 +80,10 @@ class myLecture extends $blab.Lecture
     respect = @step "lecture-text-respect",
       action: (o) -> flash2(o, many)
 
-    diameter = @step "lecture-text-diameter",
+    #diameter = @step "lecture-text-diameter",
+    #  action: (o) -> flash2(o, space)
+
+    diameter = @step "lecture-table-count",
       action: (o) -> flash2(o, space)
 
     rarely = @step "lecture-text-rarely",
@@ -72,40 +92,61 @@ class myLecture extends $blab.Lecture
     instead = @step "lecture-text-instead",
       action: (u) -> flash2(u, rarely)
 
-    sn = @step "lecture-text-sn",
-      action: (u) -> flash2(u, diameter)
+    sn = @step "lecture-table-sn",
+      action: (u) -> flash2(u, instead)
 
     roughly = @step "lecture-text-roughly",
-      action: (u) -> flash2(u, instead)
+      action: entrance
 
     understanding = @step "lecture-text-understanding",
       action: (u) -> flash2(u, roughly)
 
+    table_product = @step "lecture-table-product",
+      action: entrance
+
     eg_intro = @step "lecture-text-eg-intro",
-      action: (u) -> flash2(u, sn)
-    #replace: diameter
-
-    @step "lecture-menu-examples",
-      #replace: eg_intro
-      action: (u) -> flash2(u, eg_intro)
-
-    @step "lecture-table-count",
-      action: (o) ->
-        f: -> o.fadeIn(1000)
-        b: -> o.fadeOut()
-
-    count_intro = @step "lecture-text-count",
-      #replace: understanding
       action: (u) -> flash2(u, understanding)
 
-    @step "lecture-slider-count",
-      action: (u) -> flash2(u, count_intro)
+    @step "lecture-slider-shift",
+      action: (u) -> flash2(u, eg_intro)
 
-    @step "lecture-slider-count",
+    @step "lecture-slider-shift",
       action: @action(vals: [1..3])
 
+    expo = @step "lecture-text-exp",
+      action: entrance
+
+    @step "lecture-table-exp",
+      action: entrance
+
+    shift = @step "lecture-text-shift",
+      action: (u) -> flash2(u, expo)
+
+    @step "lecture-slider-shift",
+      action: @action(vals: [4..26])
+
+    question = @step "lecture-text-question",
+      action: (u) -> flash2(u, shift)
+
+    choose = @step "lecture-text-choose",
+      action: (u) -> flash2(u, question)
+
+    @step "lecture-menu-examples",
+      action: (u) -> flash2(u, choose)
+
+    ###
+
+    @step "lecture-table-count",
+      action: entrance
+
+
+      
+    count_intro = @step "lecture-text-count",
+      action: entrance
+
+
     counting = @step "lecture-text-counting-digits",
-      action: (u) -> flash2(u, count_intro)
+      action: entrance
 
     for_instance = @step "lecture-text-for-instance",
       action: (u) -> flash2(u, counting)
@@ -113,20 +154,14 @@ class myLecture extends $blab.Lecture
     key = @step "lecture-text-key",
       action: (u) -> flash2(u, for_instance)
 
-    o = @step "lecture-text-key-blank",
-      action: "fade"
-      replace: key
+    #o = @step "lecture-text-key-blank",
+    #  action: "fade"
+    #  replace: key
 
     product = @step "lecture-text-product",
-      replace: o
-      action: flash
+      action: (u) -> flash2(u, key)
 
-    table_product = @step "lecture-table-product",
-      replace: product 
-      action: (o) ->
-        f: -> o.fadeIn(1000)
-        b: -> o.fadeOut()
-
+        
     power_of_ten = @step "lecture-text-power-of-ten",
       action: "fade"
 
@@ -142,7 +177,6 @@ class myLecture extends $blab.Lecture
     all_that_remains= @step "lecture-text-all-that-remains",
       action: (u) -> flash2(u, one_digit)
 
-    @step "lecture-table-sn",
-      action: (u) -> flash2(u, all_that_remains)
+    ###
 
 new myLecture

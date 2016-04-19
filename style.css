@@ -1,15 +1,75 @@
+/*
+body {
+    font-family: 'Open Sans', sans-ser;
+}
+*/
+
+#lecture-menu-examples .blab-menu {
+    width: 80%;
+}
+
+#lecture-menu-examples .menu-text-container {
+    height: 0;
+}
+
+#product {
+    margin-bottom: 0px; 
+}
+
+#exp {
+    margin-bottom: 0px; 
+}
+
+#count {
+    margin-bottom: 0px; 
+}
+
+#sn {
+    margin-bottom: 0px; 
+}
+
+#sn td {
+    border: 1px solid lightgrey;    
+}
+
+
+#count td {
+    border: 1px solid lightgrey;    
+}
+
+#product td {
+    border: 1px solid lightgrey;    
+}
+
+#exp td {
+    border: 1px solid lightgrey;    
+}
+
+
+#sn {
+    margin-bottom: 0px; 
+}
 
 .lecture-table td, th {
-    font-size: 16pt;
-    border: 3px solid green;
+    /*font-size: 16pt;*/
+    border: 1px solid green;
 }
 
 #lecture-table-count tr {
-    height: 120px;
+    height: 150px;
 }  
 
 #lecture-table-product tr {
-    height: 60px;
+    height: 75px;
+}  
+
+#lecture-table-exp tr {
+    height: 75px;
+}  
+
+
+#lecture-table-sn tr {
+    height: 150px;
 }  
 
 /* Examples of fade effects */
@@ -29,5 +89,45 @@
   border: 2px solid black;
   opacity: 1;
   /*background: #ff9;*/
+}
+
+
+.menu {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.slider {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14pt;
+    /*font-family: 'Architects Daughter', cursive;*/
 }
 

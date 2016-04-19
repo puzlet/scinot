@@ -13,4 +13,5 @@ resources
     "//api.github.com/repos/davatron5000/Lettering.js/contents/jquery.lettering.js"
     "//api.github.com/repos/daneden/animate.css/contents/animate.min.css"
     "//api.github.com/repos/jschr/textillate/contents/jquery.textillate.js"
-  ]
+    "//api.github.com/repos/MikeMcl/decimal.js-light/contents/decimal.min.js"
+]

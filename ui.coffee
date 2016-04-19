@@ -5,14 +5,14 @@
 menu_examples = new Menu
   container: $("#lecture-menu-examples")
   init: 1
-  prompt: "Example:"
+  prompt: null
   options: [
     {text: "choose example", value: 0}
     {text: "diameter of visible universe", value: 1}
     {text: "power output of sun", value: 2}
     {text: "mass of the earth", value: 3}
   ]
-  align: "left"
+  align: "center"
 
 table_count = new Table
   container: $("#lecture-table-count")
@@ -24,6 +24,13 @@ table_count = new Table
 table_product = new Table
   container: $("#lecture-table-product")
   id: "product"
+  title: null
+  headings: null
+  widths: 500
+
+table_exp = new Table
+  container: $("#lecture-table-exp")
+  id: "exp"
   title: null
   headings: null
   widths: 500
@@ -54,4 +61,4 @@ slider_shift = new Slider
   step: 1
 
 
-$blab.computation "compute.coffee", {slider_count, slider_shift, table_count, table_product, table_sn, menu_examples}
+$blab.computation "compute.coffee", {slider_count, slider_shift, table_count, table_product, table_sn, table_exp, menu_examples}
