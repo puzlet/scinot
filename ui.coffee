@@ -14,12 +14,12 @@ menu_examples = new Menu
   ]
   align: "center"
 
-table_count = new Table
-  container: $("#lecture-table-count")
-  id: "count"  # Must be consistent with tables.json
+table_decimal = new Table
+  container: $("#lecture-table-decimal")
+  id: "decimal"
   title: null
-  headings: null # ["Column 1", "Column 2"]
-  widths: 500  #[100, 100]
+  headings: null
+  widths: 500
 
 table_product = new Table
   container: $("#lecture-table-product")
@@ -61,4 +61,4 @@ slider_shift = new Slider
   step: 1
 
 
-$blab.computation "compute.coffee", {slider_count, slider_shift, table_count, table_product, table_sn, table_exp, menu_examples}
+$blab.computation "compute.coffee", {slider_count, slider_shift, table_decimal, table_product, table_sn, table_exp, menu_examples}

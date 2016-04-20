@@ -20,7 +20,7 @@ body {
     margin-bottom: 0px; 
 }
 
-#count {
+#decimal {
     margin-bottom: 0px; 
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 
-#count td {
+#decimal td {
     border: 1px solid lightgrey;    
 }
 
@@ -55,7 +55,7 @@ body {
     border: 1px solid green;
 }
 
-#lecture-table-count tr {
+#lecture-table-decimal tr {
     height: 150px;
 }  
 
