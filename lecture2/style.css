@@ -1,0 +1,52 @@
+
+.lecture-table div {
+    font-size: 24pt;
+    font-family: monospace;
+    /*border: 3px solid blue;*/
+    text-align: left;
+}
+
+
+#shift, #rep, #number {
+    margin-bottom: 0px; 
+}
+
+
+#shift td, #rep td, #number td {
+    border: 1px solid lightgreen;    
+    font-size: 18pt;
+}
+
+
+.lecture-table tr {
+    height: 150px;
+}  
+
+.slider {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14pt;
+}
+

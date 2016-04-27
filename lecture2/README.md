@@ -1,0 +1,2 @@
+# scinot
+Scientific notation lecture
