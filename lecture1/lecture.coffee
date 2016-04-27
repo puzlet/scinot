@@ -25,7 +25,8 @@ class myLecture extends $blab.Lecture
         o.show 0, ->
           o.addClass('animated flipInX')
       b: ->
-
+        o.hide()
+        
     flash2 = (o, p) ->
       f: ->
         animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
@@ -33,9 +34,8 @@ class myLecture extends $blab.Lecture
           p.hide()
           o.show 0, ->
             o.addClass("animated flipInX")
-
       b: ->
-
+        o.hide()
        
     @step "lecture-heading",
       action: "fade"
