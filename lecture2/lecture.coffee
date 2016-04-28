@@ -52,5 +52,19 @@ class myLecture extends $blab.Lecture
     @step "lecture-slider-shift",
       action: @action(vals: [3..-3])
 
+    shift = @step "lecture-text-shift",
+      action: (u) -> flash2(u, negative)
+
+    left = @step "lecture-text-left",
+      action: (u) -> flash2(u, shift)
+
+    @step "lecture-table-shift",
+      action: (u) -> flash2(u, left)
+
+    enough = @step "lecture-text-enough",
+      action: entrance
+
+    multiply = @step "lecture-text-multiply",
+      action: (u) -> flash2(u, enough)
 
 new myLecture

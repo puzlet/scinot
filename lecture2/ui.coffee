@@ -25,8 +25,8 @@ table_number = new Table
 
 slider_shift = new Slider
   container: $("#lecture-slider-shift")
-  prompt: "shift"
-  unit: "points"
+  prompt: "exponent"
+  unit: null
   init: 0
   min: -10
   max: 10

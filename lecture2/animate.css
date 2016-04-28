@@ -9,8 +9,8 @@
  */
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -1848,9 +1848,10 @@
     transform: perspective(400px) rotate3d(-1, 0, 0, 90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-    opacity: 0;
+    opacity: 1;
   }
 
+  /*
   40% {
     -webkit-transform: perspective(400px) rotate3d(-1, 0, 0, -20deg);
     transform: perspective(400px) rotate3d(-1, 0, 0, -20deg);
@@ -1868,6 +1869,7 @@
     -webkit-transform: perspective(400px) rotate3d(-1, 0, 0, -5deg);
     transform: perspective(400px) rotate3d(-1, 0, 0, -5deg);
   }
+  */
 
   to {
     -webkit-transform: perspective(400px);
@@ -1881,9 +1883,10 @@
     transform: perspective(400px) rotate3d(-1, 0, 0, 90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-    opacity: 0;
+    opacity: 1;
   }
 
+  /*
   40% {
     -webkit-transform: perspective(400px) rotate3d(-1, 0, 0, -20deg);
     transform: perspective(400px) rotate3d(-1, 0, 0, -20deg);
@@ -1901,6 +1904,7 @@
     -webkit-transform: perspective(400px) rotate3d(-1, 0, 0, -5deg);
     transform: perspective(400px) rotate3d(-1, 0, 0, -5deg);
   }
+  */
 
   to {
     -webkit-transform: perspective(400px);
@@ -1924,6 +1928,7 @@
     opacity: 0;
   }
 
+  /*
   40% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
@@ -1941,6 +1946,7 @@
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
+  */
 
   to {
     -webkit-transform: perspective(400px);
@@ -1957,6 +1963,7 @@
     opacity: 0;
   }
 
+  /*
   40% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
@@ -1974,6 +1981,7 @@
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
+  */
 
   to {
     -webkit-transform: perspective(400px);
@@ -1994,11 +2002,13 @@
     transform: perspective(400px);
   }
 
+  /*
   30% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     opacity: 1;
   }
+  */
 
   to {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
@@ -2013,11 +2023,13 @@
     transform: perspective(400px);
   }
 
+  /*
   30% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     opacity: 1;
   }
+  */
 
   to {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);

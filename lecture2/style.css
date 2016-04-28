@@ -1,4 +1,5 @@
 
+
 .lecture-table div {
     font-size: 24pt;
     font-family: monospace;
@@ -12,7 +13,12 @@
 }
 
 
-#shift td, #rep td, #number td {
+#number td {
+    border: 1px solid lightgreen;    
+    font-size: 32pt;
+}
+
+#shift td, #rep td {
     border: 1px solid lightgreen;    
     font-size: 18pt;
 }
