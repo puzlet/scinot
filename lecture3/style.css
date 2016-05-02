@@ -1,0 +1,52 @@
+.lecture-table tr {
+    height: 150px;
+}  
+
+#lecture-table-product tr, #lecture-table-repeated tr {
+    height: 75px;
+}  
+
+.lecture-table div {
+    font-size: 24pt;
+    font-family: monospace;
+    text-align: left;
+}
+
+#shift, #repeated {
+    margin-bottom: 0px; 
+}
+
+
+#shift td, #repeated td, #product td {
+    border: 1px solid lightgreen;    
+    font-size: 18pt;
+}
+
+.slider {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid lightgrey;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14pt;
+}
+
