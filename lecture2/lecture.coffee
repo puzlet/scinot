@@ -43,17 +43,23 @@ class myLecture extends $blab.Lecture
     positive = @step "lecture-text-positive",
       action: entrance
 
-    @step "lecture-table-rep",
+    multiply = @step "lecture-text-multiply",
       action: (u) -> flash2(u, positive)
+
+    @step "lecture-table-rep",
+      action: (u) -> flash2(u, multiply)
 
     negative = @step "lecture-text-negative",
       action: entrance
+
+    divide = @step "lecture-text-divide",
+      action: (u) -> flash2(u, negative)
       
     @step "lecture-slider-shift",
       action: @action(vals: [3..-3])
 
     shift = @step "lecture-text-shift",
-      action: (u) -> flash2(u, negative)
+      action: (u) -> flash2(u, divide)
 
     left = @step "lecture-text-left",
       action: (u) -> flash2(u, shift)
@@ -61,10 +67,17 @@ class myLecture extends $blab.Lecture
     @step "lecture-table-shift",
       action: (u) -> flash2(u, left)
 
-    enough = @step "lecture-text-enough",
+    enough1 = @step "lecture-text-enough1",
       action: entrance
 
-    multiply = @step "lecture-text-multiply",
-      action: (u) -> flash2(u, enough)
+    enough2 = @step "lecture-text-enough2",
+      action: (u) -> flash2(u, enough1)
+
+    enough3 = @step "lecture-text-enough3",
+      action: (u) -> flash2(u, enough2)
+
+    enough4 = @step "lecture-text-enough4",
+      action: (u) -> flash2(u, enough3)
+    
 
 new myLecture

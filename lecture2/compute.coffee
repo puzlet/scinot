@@ -1,15 +1,15 @@
 rep10 = (n) ->
   switch
     when n>1
-      '10'+Array(n).join('&times;10')
+      '1&times;10'+Array(n).join('&times;10')
     when n == 1
       '1&times;10'
     when n == 0
       '1'
     when n == -1
-      '1/10'
+      '1&divide;10'
     when n<-1
-      '1/(10'+Array(-n).join('&times;10')+")"
+      '1&divide;10'+Array(-n).join('&divide;10')
 
 n = slider_shift "n"
 
