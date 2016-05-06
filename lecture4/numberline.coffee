@@ -6,7 +6,7 @@ round = (u) -> Math.round(u)
 
 sigArray = (u, sig) ->
   mult = 10**(sig - floor(log10 abs(u)) - 1)
-  console.log "sigArray", round(u * mult)+[-2, -1, 0, 1, 2]
+  #console.log "sigArray", round(u * mult)+[-2, -1, 0, 1, 2]
   (round(u * mult)+[-2, -1, 0, 1, 2])/mult
 
 sigFigs = $blab.sigFigs
@@ -88,7 +88,7 @@ class Numberline extends d3Object
     initAxes: (u, sig) ->
       
         @ticks = sigArray(u, sig)
-        console.log "ticks", @ticks
+        #console.log "ticks", @ticks
 
         @x = d3.scale.linear()
             .domain([@ticks[0], @ticks[4]])

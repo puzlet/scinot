@@ -6,12 +6,14 @@ resources
     "/puzlet/blab/css/widgets.css"  # CSS for all widgets in /puzlet/blab/widgets
     "/puzlet/blab/js/components.js"  # JS for all widgets in /puzlet/blab/widgets
     "/puzlet/lectures/js/lecture.js"
-    "../lib.coffee",
-    "numberline.coffee",
+    "../lib.coffee"
+    "numberline.coffee"
     "lecture.coffee"
     "ui.coffee"
     "compute.coffee"
     "tables.json"
     "animate.css"
     "//api.github.com/repos/MikeMcl/decimal.js/contents/decimal.min.js"
+    "//api.github.com/repos/Mikhus/canv-gauge/contents/gauge.min.js"
 ]
+
